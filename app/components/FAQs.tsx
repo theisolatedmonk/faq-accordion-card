@@ -16,7 +16,7 @@ type FAQTypes = {
 (props:FAQTypes) {
 
     const [isDropDownOpen, setDropDown] = useState(false);
-    // const [isBold, setBold] = useState(false);
+    const [bold, setBold] = useState(false);
 
     const [animationParent] = useAutoAnimate();
     const ref = useOnclickOutside(() => {
@@ -25,18 +25,20 @@ type FAQTypes = {
   
     function openDropDown() {
       console.log("drop down clicked", isDropDownOpen.toString());
-  
       setDropDown(!isDropDownOpen);
-       
+      setBold(!bold);
     }
 
   return (
    <section  ref={animationParent}
    onClick={openDropDown}
    className="relative cursor-pointer ">
- <div className={`flex flex-col w-full`}>
+ <div className={`flex flex-col w-full border-b`}>
            <div className="flex items-center gap-2"> 
-           <p className={` ${props.class} `}>{props.Questions}</p>
+           <p  
+                className={bold ? "text-black font-bold" : " "}
+ 
+           >{props.Questions}</p>
            <Image src={errow} alt={''} className={clsx(" transition-all", {
               "rotate-180 ": isDropDownOpen,
             })}/>
