@@ -32,11 +32,11 @@ type FAQTypes = {
   return (
    <section  ref={animationParent}
    onClick={openDropDown}
-   className="relative cursor-pointer ">
- <div className={`flex flex-col w-full border-b`}>
+   className="relative cursor-pointer   ">
+ <div className={`flex flex-col w-full border-b `}>
            <div className="flex items-center gap-2"> 
            <p  
-                className={bold ? "text-black font-bold" : " "}
+                className={bold ? "text-[hsl(237,12%,33%)] font-bold" : "text-[hsl(240,6%,50%)]"}
  
            >{props.Questions}</p>
            <Image src={errow} alt={''} className={clsx(" transition-all", {
@@ -44,10 +44,10 @@ type FAQTypes = {
             })}/>
            </div>
            {isDropDownOpen && (
-            <p className={`flex flex-col ${props.class} `}>{props.Answer}</p>)}
+            <p className={`flex flex-col text-[hsl(240,6%,50%)] `}>{props.Answer}</p>)}
 
         </div>
-
+        {/* "text-[hsl(237,12%,33%)]" hsl(240,6%,50%)   */}
    </section>
        
     
