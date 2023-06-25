@@ -23,7 +23,7 @@ Background gradient:
 - Soft violet: hsl(273, 75%, 66%)
 - Soft blue: hsl(240, 73%, 65%)
 
-bg-gradient-to-r from-[hsl(273,75%,66%)] to-[hsl(240,73%,65%)]
+<!-- bg-gradient-to-r from-[hsl(273,75%,66%)] to-[hsl(240,73%,65%)] -->
 ### Neutral
 
 #### Text
